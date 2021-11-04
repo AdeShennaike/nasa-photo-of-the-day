@@ -21,7 +21,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      <img src='{prop.data.url}' alt='The Nebula'/>
+      <img src='{prop.data.url}'/>
     </div>
   );
 }
