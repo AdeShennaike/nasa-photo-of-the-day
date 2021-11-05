@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
-import "./App.css";
+import "./App.css"
 import axios from 'axios'
+import Footer from "./components/footer";
+import Body from './components/body'
+import Button from './components/Button'
 import { API_KEY, BASE_URL } from "./constants/nasa";
 
 function App() {
@@ -17,13 +20,12 @@ function App() {
   },[])
   return (
     <div className="App">
-      <div>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <p>{nasa.date}</p>
       <img src={nasa.hdurl} alt='The nebula'/>
-      </div>
+      {/* <ToggleExpl/> could have also used this*/}
+      <Button explanation = {nasa.explanation}/>
+      <h1>{nasa.title}</h1>
+      <Footer copyright={nasa.copyright}/>
     </div>
   );
 }

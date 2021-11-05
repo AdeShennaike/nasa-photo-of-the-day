@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 
 
-    const ToggleDivExpl = (props) => {
-    const [toggled, setToggled] = useState(true)
-    const toggleEpla = () => setToggled(!toggled)
+    export default function ToggleExpl(props) {
+    const [toggled, setToggled] = useState(false)
+    const toggleEx = () => setToggled(!toggled)
 
     return (
         <div>
-            <button onClick={toggleEpla}>Explanation</button>
+            <button onClick={toggleEx}>{toggleEx? 'Explanation':toggled}</button>
             {toggled && <p>{props.explanation}</p>}
         </div>
     )
